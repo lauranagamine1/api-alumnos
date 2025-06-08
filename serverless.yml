@@ -17,6 +17,35 @@ functions:
           method: post
           cors: true
           integration: lambda
-
-
-
+  crear:
+    handler: CrearAlumnos.lambda_handler
+    events:
+      - http:
+          path: /alumnos/crear
+          method: post
+          cors: true
+          integration: lambda
+  modificar:
+    handler: ModificarAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumnos/modificar
+          method: put
+          cors: true
+          integration: lambda
+  buscar:
+    handler: BuscarAlumnos.lambda_handler
+    events:
+      - http:
+          path: /alumnos/buscar
+          method: post
+          cors: true
+          integration: lambda
+  eliminar:
+    handler: EliminarAlumnos.lambda_handler
+    events:
+      - http:
+          path: /alumnos/eliminar
+          method: delete
+          cors: true
+          integration: lambda

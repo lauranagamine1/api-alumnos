@@ -18,7 +18,7 @@ functions:
           cors: true
           integration: lambda
   crear:
-    handler: CrearAlumnos.lambda_handler
+    handler: CrearAlumno.lambda_handler
     events:
       - http:
           path: /alumnos/crear
@@ -34,7 +34,7 @@ functions:
           cors: true
           integration: lambda
   buscar:
-    handler: BuscarAlumnos.lambda_handler
+    handler: BuscarAlumno.lambda_handler
     events:
       - http:
           path: /alumnos/buscar
@@ -42,7 +42,7 @@ functions:
           cors: true
           integration: lambda
   eliminar:
-    handler: EliminarAlumnos.lambda_handler
+    handler: EliminarAlumno.lambda_handler
     events:
       - http:
           path: /alumnos/eliminar
